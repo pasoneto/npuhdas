@@ -1,0 +1,281 @@
+---
+title: "Get a quote"
+layout: "default"
+include_footer: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quote - npuhdas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .content{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .segment {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+        legend {
+          margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .navbar-menu{
+          background: #A84344;
+        }
+        .range-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80%;
+        }
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20%;
+            height: 80%;
+        }
+        input[type="range"] {
+            width: 80%;
+        }
+        input[type="checkbox"] {
+            margin: 0;
+        }
+        output#sizeOutput {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        output#email {
+            font-size: 1.2em;
+            font-weight: bold;
+            width: 100%
+        }
+        fieldset {
+            padding-left: 10px; /* Add padding to fieldsets for spacing */
+        }
+        fieldset label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        button {
+            margin-top: 20px;
+            width: 20%;
+            padding: 10px 15px;
+            background-color: #a84344;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #f8edeb;
+        }
+
+
+        input[type="range"] {
+            width: 100%;
+            height: 8px;
+            -webkit-appearance: none; /* Remove default styling */
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Remove default thumb styling */
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #a84344; /* Thumb color */
+            border-radius: 50%; /* Circular thumb */
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #f8edeb; /* Thumb color on hover */
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="range"]::-moz-range-thumb:hover {
+            background: #f8edeb;
+        }
+
+        input[type="range"]::-ms-thumb {
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) { /* Adjust for smaller screens */
+          form {
+              display: flex; 
+              flex-wrap: wrap; 
+              justify-content: space-between;
+              width: 100%;
+              gap: 20px;
+          }
+          .segment {
+              flex: 1 1 100%; 
+              border: 1px solid #ccc;
+              padding: 20px;
+              border-radius: 4px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              box-sizing: border-box;
+              background: white;
+          }
+        }
+
+    </style>
+</head>
+<body>
+    <form id="cleaningForm">
+        <!-- First Segment -->
+        <div class="segment">
+            <label for="apartmentSize">Apartment Size (m²):</label>
+            <div class="range-container">
+                <input type="range" id="apartmentSize" name="apartmentSize" min="0" max="300" value="50" oninput="sizeOutput.value = this.value + ' m²'">
+                <output id="sizeOutput">50 m²</output>
+            </div>
+        </div>
+
+        <!-- Second Segment -->
+        <div class="segment">
+            <fieldset>
+                <legend>Services:</legend>
+                <label>
+                    <input type="checkbox" name="services" value="windows"><div>Window cleaning</div>
+                </label>
+                <label>
+                    <input type="checkbox" name="services" value="meals">Meal Preparation
+                </label>
+                <label>
+                    <input type="checkbox" name="services" value="snow">Snow/yard work
+                </label>
+            </fieldset>
+        </div>
+
+        <!-- Third Segment -->
+        <div class="segment">
+            <fieldset>
+                <legend>Frequency:</legend>
+                <label>
+                    <input type="checkbox" name="services" value="once"> One visit
+                </label>
+                <label>
+                    <input type="checkbox" name="services" value="twice"> Two visits
+                </label>
+                <label>
+                    <input type="checkbox" name="services" value="thrice"> Three visits
+                </label>
+                <label>
+                    <input type="checkbox" name="services" value="more"> More
+                </label>
+            </fieldset>
+        </div>
+
+        <div class="segment">
+            <label for="apartmentSize">How do we contact you?</label>
+            <div class="contact-container">
+                <input type="text" id="email" name="email" placeholder="Your email"></input>
+                <input type="text" id="phone" name="phone" placeholder="Your phone"></input>
+            </div>
+        </div>
+
+    </form>
+    <button id="submitForm" onclick="sendEmail()">Submit</button>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
+<script type="text/javascript">
+  
+  function sendEmail(){
+      
+      var templateParams = {
+        m2: '',
+        services: '',
+        email: '',
+        phone: '',
+      };
+
+      //templateParams.name = document.getElementById("apartmentSize").value
+      templateParams.m2 = document.getElementById("apartmentSize").value
+      templateParams.services = [...document.querySelectorAll('input[type=checkbox]')].filter(i => i.checked === true).map(i => i.value);
+      templateParams.email = document.getElementById("email").value
+      templateParams.phone = document.getElementById("phone").value
+
+      if (templateParams.email !== '' && templateParams.phone !== ''){
+        emailjs.init({
+          publicKey: "fZrK-9t9_g3JUxy4r",
+        });
+        emailjs.send('service_w6lfs07', 'template_tnmy3dg', templateParams).then(
+          (response) => {
+            console.log('SUCCESS!', response.status, response.text);
+          },
+          (error) => {
+            console.log('FAILED...', error);
+          },
+        ).then(() => {
+            window.location.href = "/email_sent";
+        })
+      } else {
+        document.querySelector("#email").style.background = "#e59c9c"
+        document.querySelector("#phone").style.background = "#e59c9c"
+        alert("Provide at least an email or a phone, otherwise we won't know how to contact you :D")
+      }
+  }
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,181 @@
+baseURL: http://something-fresh.org/
+languageCode: en-us
+title: npuhdas 
+
+theme: 'hugo-fresh'
+
+googleAnalytics: # Put in your tracking code without quotes like this: UA-XXX for universal tracking or G-XXX analytics v4 tracking
+# Disables warnings
+disableKinds:
+- taxonomy
+- taxonomyTerm
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allows you to write raw html in your md files
+
+params:
+  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+  openGraph: true
+  # Used as meta data; describe your site to make Google Bots happy
+  description:
+  # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
+  # preloader: false
+  navbarlogo:
+  # Logo (from static/images/logos/___)
+    image: logos/small_logo_white.svg
+    link: /
+    # Default width/height. Uncomment if you need to change
+    width: 100
+    height: 28
+  font:
+    name: "Open Sans"
+    sizes: [400,600]
+  hero:
+    # Main hero title
+    title: NPUHDAS
+    # Hero subtitle (optional)
+    subtitle: Low-cost home cleaning services.
+    # Button text
+    buttontext: Get a quote
+    # Where the main hero button links to
+    buttonlink: "/quote"
+    # Hero image (from static/images/___)
+    image: illustrations/cleaners.svg
+    # Footer logos (from static/images/logos/clients/*.svg)
+    # urls are optional
+    #clientlogos:
+    #    - logo: systek
+    #      url: https://google.com
+    #    - logo: tribe
+    #      url: https://stefma.github.io/hugo-fresh/
+    #    - logo: kromo
+    #      url: https://github.com/StefMa/hugo-fresh
+    #    - logo: infinite
+    #      url: https://hugo-fresh.vercel.app/
+    #    - logo: gutwork
+    #      url: https://bulma.io/
+  # Customizable navbar. For a dropdown, add a "sublinks" list.
+  navbar:
+  - title: Home
+    url: /
+  - title: Pricing
+    url: /#section1
+  - title: About us
+    url: /#section2
+      #  - title: Dropdown
+      #    sublinks:
+      #    - title: Dropdown item
+      #      url: /
+      #    - title: Dropdown item
+      #      url: /
+      #    - title: Dropdown item
+      #      url: /
+      #  - title: Log in
+      #    url: /
+      #  - title: Sign up
+      #    url: /
+      #    button: true
+      #  sidebar:
+    # Logo (from static/images/logos/___.svg)
+    #    logo: fresh-square
+    #    sections:
+      #    - title: User
+      #      icon: user
+      #      links:
+      #      - text: Profile
+      #        url: /
+      #      - text: Account
+      #        url: /
+      #      - text: Settings
+      #        url: /
+      #    - title: Contact
+      #      icon: envelope
+      #      links:
+      #      - text: WhatsApp 
+      #        url: /
+      #      - text: e-mail
+      #        url: /
+          #    - title: Images
+          #      icon: image
+          #      links:
+          #      - text: Library
+          #        url: /
+          #      - text: Upload
+          #        url: /
+          #    - title: Settings
+          #      icon: cog
+          #      links:
+          #      - text: User settings
+          #        url: /
+          #      - text: App settings
+          #        url: /
+  section1:
+    title: Pricing
+    subtitle: Find the best option for you
+    tiles:
+    - title: Single visit
+      icon: single
+      text: Schedule a single visit of our cleaners for 25€/h.
+      url: /quote
+      buttonText: Get a quote
+    - title: Double visit
+      icon: double
+      text: Schedule 2 visits of our cleaners for 23€/h.
+      url: /quote
+      buttonText: Get a quote
+    - title: Three or more visits
+      icon: triple
+      text: Schedule 3 or more visits of our cleaners for 20€/h.
+      url: /quote
+      buttonText: Get a quote
+  section2:
+    title: NPUHDAS
+    subtitle: Low-cost home cleaning.
+    tiles:
+    - title: About us
+      text: Neto Clean (3462827-7) is a company focused on connecting homes with professional cleaners. We connect cleaners to households, and provide legal and logistic support to both parties.
+      url: 
+    - title: Why are our prices that low?
+      text: Our company is as light weight as possible. Our cleaners do not bring cleaning materials with them, and we cut costs on uniforms, transport, expensive websites and advertisement.
+      url: 
+    - title: Tax deduction
+      icon: triple
+      text: In Finland, house cleaning services are tax deducible. This means that households have the right to get 60% back of what they spend with us. If needed, we can help you with the tax deduction in Vero.
+      url: https://www.vero.fi/en/individuals/deductions/Tax-credit-for-household-expenses/requirements-for-the-tax-credit-for-household-expenses/
+      urlText: Find official information here.
+  footer:
+    # Logo (from static/images/logos/___)
+    logo: small_logo_white.svg
+    # Social Media Title
+    #    socialmediatitle: Follow Us
+    # Social media links (GitHub, Twitter, etc.). All are optional.
+    #    socialmedia:
+      #    - link: https://github.com/StefMa
+      # Icons are from Font Awesome
+      #      icon: github
+      #    - link: https://www.instagram.com/npuhdas/
+      #      icon: dribbble
+        #    - link: https://facebook.com/#
+        #      icon: facebook
+        #    - link: https://twitter.com/StefMa91
+        #      icon: twitter
+        #    - link: https://bitbucket.org/#
+        #      icon: bitbucket
+    bulmalogo: false
+    quicklinks:
+      column1:
+        title: ""
+        links:
+        - text: About us
+          link: /
+      column2:
+        title: ""
+        links:
+        - text: Pricing
+          link: /
+      column3:
+        title: ""
+        links:
+        - text: Get a quote
+          link: /quote
