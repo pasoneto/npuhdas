@@ -4,7 +4,7 @@ title: npuhdas
 
 theme: 'hugo-fresh'
 
-googleAnalytics: UA-G-10JQB2ZMRT # Put in your tracking code without quotes like this: UA-XXX for universal tracking or G-XXX analytics v4 tracking
+googleAnalytics: G-10JQB2ZMRT # Put in your tracking code without quotes like this: UA-XXX for universal tracking or G-XXX analytics v4 tracking
 # Disables warnings
 disableKinds:
 - taxonomy
